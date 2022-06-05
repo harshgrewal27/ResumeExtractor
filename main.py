@@ -40,7 +40,7 @@ def parse_content(text):
     email = [word for word in resume if word.like_email == True][0]
     phone=str(re.findall(phonenum , text.lower()))
     skills_list = re.findall(skillset,text.lower())
-    unique_skill_list = str(set(skills_list))
+    unique_skill_list = list(set(skills_list))
     names.append(name)
     phones.append(phone)
     emails.append(email)
